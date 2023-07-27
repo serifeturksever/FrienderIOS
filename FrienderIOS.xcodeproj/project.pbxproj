@@ -21,6 +21,9 @@
 		E9F7E2F52A72A2B7004AE7EB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2F42A72A2B7004AE7EB /* CustomTextField.swift */; };
 		E9F7E2F72A72A392004AE7EB /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2F62A72A392004AE7EB /* AuthHeaderView.swift */; };
 		E9F7E2F92A72A454004AE7EB /* ProgressActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2F82A72A454004AE7EB /* ProgressActivityIndicator.swift */; };
+		E9F7E2FB2A72A4B4004AE7EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2FA2A72A4B4004AE7EB /* LoginViewController.swift */; };
+		E9F7E2FD2A72A4BF004AE7EB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2FC2A72A4BF004AE7EB /* RegisterViewController.swift */; };
+		E9F7E2FF2A72A50C004AE7EB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2FE2A72A50C004AE7EB /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		E9F7E2F42A72A2B7004AE7EB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E9F7E2F62A72A392004AE7EB /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		E9F7E2F82A72A454004AE7EB /* ProgressActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressActivityIndicator.swift; sourceTree = "<group>"; };
+		E9F7E2FA2A72A4B4004AE7EB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E9F7E2FC2A72A4BF004AE7EB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E9F7E2FE2A72A50C004AE7EB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +121,6 @@
 				E9F7E2EC2A72A130004AE7EB /* Model */,
 				E9F7E2BC2A729D8F004AE7EB /* AppDelegate.swift */,
 				E9F7E2BE2A729D8F004AE7EB /* SceneDelegate.swift */,
-				E9F7E2C02A729D8F004AE7EB /* ViewController.swift */,
 				E9F7E2C22A729D8F004AE7EB /* Main.storyboard */,
 				E9F7E2C52A729D90004AE7EB /* Assets.xcassets */,
 				E9F7E2C72A729D90004AE7EB /* LaunchScreen.storyboard */,
@@ -162,6 +167,10 @@
 		E9F7E2EE2A72A14B004AE7EB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E9F7E2C02A729D8F004AE7EB /* ViewController.swift */,
+				E9F7E2FA2A72A4B4004AE7EB /* LoginViewController.swift */,
+				E9F7E2FC2A72A4BF004AE7EB /* RegisterViewController.swift */,
+				E9F7E2FE2A72A50C004AE7EB /* ForgotPasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,6 +314,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F7E2FB2A72A4B4004AE7EB /* LoginViewController.swift in Sources */,
+				E9F7E2FD2A72A4BF004AE7EB /* RegisterViewController.swift in Sources */,
+				E9F7E2FF2A72A50C004AE7EB /* ForgotPasswordViewController.swift in Sources */,
 				E9F7E2F12A72A1E2004AE7EB /* WebViewerController.swift in Sources */,
 				E9F7E2F92A72A454004AE7EB /* ProgressActivityIndicator.swift in Sources */,
 				E9F7E2C12A729D8F004AE7EB /* ViewController.swift in Sources */,
