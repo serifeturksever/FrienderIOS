@@ -12,7 +12,7 @@ class AuthHeaderView: UIView {
     private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "eatravel")
+        imageView.image = UIImage(named: "randomLogo")
         return imageView
     }()
     
