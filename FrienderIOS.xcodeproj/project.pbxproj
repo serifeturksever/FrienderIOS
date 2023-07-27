@@ -16,6 +16,11 @@
 		E9F7E2D42A729D90004AE7EB /* FrienderIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2D32A729D90004AE7EB /* FrienderIOSTests.swift */; };
 		E9F7E2DE2A729D90004AE7EB /* FrienderIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2DD2A729D90004AE7EB /* FrienderIOSUITests.swift */; };
 		E9F7E2E02A729D90004AE7EB /* FrienderIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2DF2A729D90004AE7EB /* FrienderIOSUITestsLaunchTests.swift */; };
+		E9F7E2F12A72A1E2004AE7EB /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2F02A72A1E2004AE7EB /* WebViewerController.swift */; };
+		E9F7E2F32A72A293004AE7EB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2F22A72A293004AE7EB /* CustomButton.swift */; };
+		E9F7E2F52A72A2B7004AE7EB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2F42A72A2B7004AE7EB /* CustomTextField.swift */; };
+		E9F7E2F72A72A392004AE7EB /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2F62A72A392004AE7EB /* AuthHeaderView.swift */; };
+		E9F7E2F92A72A454004AE7EB /* ProgressActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2F82A72A454004AE7EB /* ProgressActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		E9F7E2D92A729D90004AE7EB /* FrienderIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrienderIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F7E2DD2A729D90004AE7EB /* FrienderIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrienderIOSUITests.swift; sourceTree = "<group>"; };
 		E9F7E2DF2A729D90004AE7EB /* FrienderIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrienderIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E9F7E2F02A72A1E2004AE7EB /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
+		E9F7E2F22A72A293004AE7EB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E9F7E2F42A72A2B7004AE7EB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		E9F7E2F62A72A392004AE7EB /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		E9F7E2F82A72A454004AE7EB /* ProgressActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,10 @@
 		E9F7E2BB2A729D8F004AE7EB /* FrienderIOS */ = {
 			isa = PBXGroup;
 			children = (
+				E9F7E2EF2A72A17F004AE7EB /* Helper */,
+				E9F7E2EE2A72A14B004AE7EB /* Controller */,
+				E9F7E2ED2A72A145004AE7EB /* View */,
+				E9F7E2EC2A72A130004AE7EB /* Model */,
 				E9F7E2BC2A729D8F004AE7EB /* AppDelegate.swift */,
 				E9F7E2BE2A729D8F004AE7EB /* SceneDelegate.swift */,
 				E9F7E2C02A729D8F004AE7EB /* ViewController.swift */,
@@ -125,6 +139,39 @@
 				E9F7E2DF2A729D90004AE7EB /* FrienderIOSUITestsLaunchTests.swift */,
 			);
 			path = FrienderIOSUITests;
+			sourceTree = "<group>";
+		};
+		E9F7E2EC2A72A130004AE7EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9F7E2ED2A72A145004AE7EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9F7E2F22A72A293004AE7EB /* CustomButton.swift */,
+				E9F7E2F42A72A2B7004AE7EB /* CustomTextField.swift */,
+				E9F7E2F62A72A392004AE7EB /* AuthHeaderView.swift */,
+				E9F7E2F82A72A454004AE7EB /* ProgressActivityIndicator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9F7E2EE2A72A14B004AE7EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E9F7E2EF2A72A17F004AE7EB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E9F7E2F02A72A1E2004AE7EB /* WebViewerController.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F7E2F12A72A1E2004AE7EB /* WebViewerController.swift in Sources */,
+				E9F7E2F92A72A454004AE7EB /* ProgressActivityIndicator.swift in Sources */,
 				E9F7E2C12A729D8F004AE7EB /* ViewController.swift in Sources */,
+				E9F7E2F52A72A2B7004AE7EB /* CustomTextField.swift in Sources */,
 				E9F7E2BD2A729D8F004AE7EB /* AppDelegate.swift in Sources */,
 				E9F7E2BF2A729D8F004AE7EB /* SceneDelegate.swift in Sources */,
+				E9F7E2F32A72A293004AE7EB /* CustomButton.swift in Sources */,
+				E9F7E2F72A72A392004AE7EB /* AuthHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
