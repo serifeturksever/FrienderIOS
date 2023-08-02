@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9225C872A7A9EA800BCCDA5 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9225C852A7A9EA800BCCDA5 /* ItemCell.swift */; };
+		E9225C882A7A9EA800BCCDA5 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9225C862A7A9EA800BCCDA5 /* ItemCell.xib */; };
 		E9F7E2BD2A729D8F004AE7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2BC2A729D8F004AE7EB /* AppDelegate.swift */; };
 		E9F7E2BF2A729D8F004AE7EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2BE2A729D8F004AE7EB /* SceneDelegate.swift */; };
-		E9F7E2C12A729D8F004AE7EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2C02A729D8F004AE7EB /* ViewController.swift */; };
+		E9F7E2C12A729D8F004AE7EB /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2C02A729D8F004AE7EB /* CategoryListViewController.swift */; };
 		E9F7E2C42A729D8F004AE7EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F7E2C22A729D8F004AE7EB /* Main.storyboard */; };
 		E9F7E2C62A729D90004AE7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F7E2C52A729D90004AE7EB /* Assets.xcassets */; };
 		E9F7E2C92A729D90004AE7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F7E2C72A729D90004AE7EB /* LaunchScreen.storyboard */; };
@@ -74,10 +76,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9225C852A7A9EA800BCCDA5 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		E9225C862A7A9EA800BCCDA5 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		E9F7E2B92A729D8F004AE7EB /* FrienderIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrienderIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F7E2BC2A729D8F004AE7EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9F7E2BE2A729D8F004AE7EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9F7E2C02A729D8F004AE7EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9F7E2C02A729D8F004AE7EB /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		E9F7E2C32A729D8F004AE7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9F7E2C52A729D90004AE7EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9F7E2C82A729D90004AE7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -150,6 +154,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9225C842A7A9E3D00BCCDA5 /* ItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				E9225C852A7A9EA800BCCDA5 /* ItemCell.swift */,
+				E9225C862A7A9EA800BCCDA5 /* ItemCell.xib */,
+			);
+			path = ItemCell;
+			sourceTree = "<group>";
+		};
 		E9F7E2B02A729D8F004AE7EB = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +187,7 @@
 		E9F7E2BB2A729D8F004AE7EB /* FrienderIOS */ = {
 			isa = PBXGroup;
 			children = (
+				E9225C842A7A9E3D00BCCDA5 /* ItemCell */,
 				E9F7E2EF2A72A17F004AE7EB /* Helper */,
 				E9F7E2EE2A72A14B004AE7EB /* Controller */,
 				E9F7E2ED2A72A145004AE7EB /* View */,
@@ -226,7 +240,7 @@
 		E9F7E2EE2A72A14B004AE7EB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E9F7E2C02A729D8F004AE7EB /* ViewController.swift */,
+				E9F7E2C02A729D8F004AE7EB /* CategoryListViewController.swift */,
 				E9F7E2FA2A72A4B4004AE7EB /* LoginViewController.swift */,
 				E9F7E2FC2A72A4BF004AE7EB /* RegisterViewController.swift */,
 				E9F7E2FE2A72A50C004AE7EB /* ForgotPasswordViewController.swift */,
@@ -380,6 +394,7 @@
 			files = (
 				E9F7E2C92A729D90004AE7EB /* LaunchScreen.storyboard in Resources */,
 				E9F7E3032A72AAE5004AE7EB /* GoogleService-Info.plist in Resources */,
+				E9225C882A7A9EA800BCCDA5 /* ItemCell.xib in Resources */,
 				E9F7E2C62A729D90004AE7EB /* Assets.xcassets in Resources */,
 				E9F7E2C42A729D8F004AE7EB /* Main.storyboard in Resources */,
 			);
@@ -413,9 +428,10 @@
 				E9F7E2FF2A72A50C004AE7EB /* ForgotPasswordViewController.swift in Sources */,
 				E9F7E2F12A72A1E2004AE7EB /* WebViewerController.swift in Sources */,
 				E9F7E2F92A72A454004AE7EB /* ProgressActivityIndicator.swift in Sources */,
-				E9F7E2C12A729D8F004AE7EB /* ViewController.swift in Sources */,
+				E9F7E2C12A729D8F004AE7EB /* CategoryListViewController.swift in Sources */,
 				E9F7E2F52A72A2B7004AE7EB /* CustomTextField.swift in Sources */,
 				E9F7E2BD2A729D8F004AE7EB /* AppDelegate.swift in Sources */,
+				E9225C872A7A9EA800BCCDA5 /* ItemCell.swift in Sources */,
 				E9F7E2BF2A729D8F004AE7EB /* SceneDelegate.swift in Sources */,
 				E9F7E2F32A72A293004AE7EB /* CustomButton.swift in Sources */,
 				E9F7E2F72A72A392004AE7EB /* AuthHeaderView.swift in Sources */,
