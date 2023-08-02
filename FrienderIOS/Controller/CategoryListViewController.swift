@@ -29,6 +29,8 @@ class CategoryListViewController: UIViewController {
         //SetupGrid view
         self.setupGridView()
         
+
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -47,6 +49,10 @@ class CategoryListViewController: UIViewController {
     }
     
 
+    private func showCategoryRooms(categoryName: String){
+        let viewController = CategoryRoomsViewController(categoryName:categoryName)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
 }
 
@@ -61,6 +67,12 @@ extension CategoryListViewController: UICollectionViewDataSource {
         cell.setData(text: self.categories[indexPath.row])
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        let categoryName = self.categories[indexPath.row]
+        showCategoryRooms(categoryName: categoryName)
+        return false
     }
     
 }
