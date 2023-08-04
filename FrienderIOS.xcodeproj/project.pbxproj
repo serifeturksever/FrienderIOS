@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E9225C872A7A9EA800BCCDA5 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9225C852A7A9EA800BCCDA5 /* ItemCell.swift */; };
 		E9225C882A7A9EA800BCCDA5 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9225C862A7A9EA800BCCDA5 /* ItemCell.xib */; };
+		E98725972A7D7C0D00801C66 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98725962A7D7C0D00801C66 /* CustomDatePicker.swift */; };
+		E987259B2A7D806900801C66 /* Todo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E987259A2A7D806900801C66 /* Todo.rtf */; };
+		E987259D2A7D808600801C66 /* ImportantNotes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E987259C2A7D808600801C66 /* ImportantNotes.rtf */; };
 		E9C800C02A7AE92C004E89FC /* CategoryRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C800BF2A7AE92C004E89FC /* CategoryRoomsViewController.swift */; };
 		E9C800C22A7AF126004E89FC /* AddRoomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C800C12A7AF126004E89FC /* AddRoomPageViewController.swift */; };
 		E9F7E2BD2A729D8F004AE7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2BC2A729D8F004AE7EB /* AppDelegate.swift */; };
@@ -80,6 +83,9 @@
 /* Begin PBXFileReference section */
 		E9225C852A7A9EA800BCCDA5 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		E9225C862A7A9EA800BCCDA5 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		E98725962A7D7C0D00801C66 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		E987259A2A7D806900801C66 /* Todo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Todo.rtf; sourceTree = "<group>"; };
+		E987259C2A7D808600801C66 /* ImportantNotes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ImportantNotes.rtf; sourceTree = "<group>"; };
 		E9C800BF2A7AE92C004E89FC /* CategoryRoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRoomsViewController.swift; sourceTree = "<group>"; };
 		E9C800C12A7AF126004E89FC /* AddRoomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomPageViewController.swift; sourceTree = "<group>"; };
 		E9F7E2B92A729D8F004AE7EB /* FrienderIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrienderIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +173,15 @@
 			path = ItemCell;
 			sourceTree = "<group>";
 		};
+		E98725992A7D804900801C66 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				E987259A2A7D806900801C66 /* Todo.rtf */,
+				E987259C2A7D808600801C66 /* ImportantNotes.rtf */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		E9F7E2B02A729D8F004AE7EB = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +206,7 @@
 		E9F7E2BB2A729D8F004AE7EB /* FrienderIOS */ = {
 			isa = PBXGroup;
 			children = (
+				E98725992A7D804900801C66 /* Notes */,
 				E9225C842A7A9E3D00BCCDA5 /* ItemCell */,
 				E9F7E2EF2A72A17F004AE7EB /* Helper */,
 				E9F7E2EE2A72A14B004AE7EB /* Controller */,
@@ -237,6 +253,7 @@
 				E9F7E2F42A72A2B7004AE7EB /* CustomTextField.swift */,
 				E9F7E2F62A72A392004AE7EB /* AuthHeaderView.swift */,
 				E9F7E2F82A72A454004AE7EB /* ProgressActivityIndicator.swift */,
+				E98725962A7D7C0D00801C66 /* CustomDatePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,6 +417,8 @@
 			files = (
 				E9F7E2C92A729D90004AE7EB /* LaunchScreen.storyboard in Resources */,
 				E9F7E3032A72AAE5004AE7EB /* GoogleService-Info.plist in Resources */,
+				E987259B2A7D806900801C66 /* Todo.rtf in Resources */,
+				E987259D2A7D808600801C66 /* ImportantNotes.rtf in Resources */,
 				E9225C882A7A9EA800BCCDA5 /* ItemCell.xib in Resources */,
 				E9F7E2C62A729D90004AE7EB /* Assets.xcassets in Resources */,
 				E9F7E2C42A729D8F004AE7EB /* Main.storyboard in Resources */,
@@ -434,6 +453,7 @@
 				E9F7E2FD2A72A4BF004AE7EB /* RegisterViewController.swift in Sources */,
 				E9F7E2FF2A72A50C004AE7EB /* ForgotPasswordViewController.swift in Sources */,
 				E9F7E2F12A72A1E2004AE7EB /* WebViewerController.swift in Sources */,
+				E98725972A7D7C0D00801C66 /* CustomDatePicker.swift in Sources */,
 				E9F7E2F92A72A454004AE7EB /* ProgressActivityIndicator.swift in Sources */,
 				E9F7E2C12A729D8F004AE7EB /* CategoryListViewController.swift in Sources */,
 				E9C800C02A7AE92C004E89FC /* CategoryRoomsViewController.swift in Sources */,
