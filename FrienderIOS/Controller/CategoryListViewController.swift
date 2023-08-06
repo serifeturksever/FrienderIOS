@@ -50,7 +50,7 @@ class CategoryListViewController: UIViewController {
     
 
     private func showCategoryRooms(categoryName: String){
-        let viewController = CategoryRoomsViewController(categoryName:categoryName)
+        let viewController = CategoryRoomsViewController() //categoryName:categoryName
         navigationController?.pushViewController(viewController, animated: true)
     }
 

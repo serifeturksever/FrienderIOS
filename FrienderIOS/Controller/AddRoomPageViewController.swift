@@ -16,17 +16,22 @@ class AddRoomPageViewController: UIViewController {
     let roomCapacityStepper = UIStepper()
     let capacityTxtLabel = UILabel()
     let activityDatePicker = CustomDatePicker()
-    
+    var strDate: String = ""
+    let dateFormatter = DateFormatter()
+
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        //self.createBtn.addTarget(self, action: #selector(getFilteredUsers), for: .touchUpInside)
+        self.createBtn.addTarget(self, action: #selector(createRoom), for: .touchUpInside)
+        self.activityDatePicker.addTarget(self, action: #selector(activityDateChanged), for: .valueChanged)
         self.roomCapacityStepper.addTarget(self, action: #selector(roomCapacityChanged), for: .valueChanged)
         self.setupUI()
     }
     
     func setupUI() {
+        dateFormatter.dateFormat = "dd LLLL yyyy HH.mm"
+        strDate = String(dateFormatter.string(from: activityDatePicker.date))
         
         view.backgroundColor = .systemBackground
         
@@ -79,9 +84,25 @@ class AddRoomPageViewController: UIViewController {
         self.createBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
         
+        
     }
     
     @objc func roomCapacityChanged(_ sender: UIStepper) {
         self.capacityTxtLabel.text = "\(Int(sender.value)) kişi"
+    }
+    
+    @objc func activityDateChanged(_ sender: UIDatePicker) {
+        
+        strDate = "\(self.dateFormatter.string(from: sender.date))"
+    }
+    
+    @objc func createRoom(_ sender: UIButton) {
+        let room = Room(name: self.roomNameTxtField.text ?? "", date: self.strDate  , capacity: Int(self.roomCapacityStepper.value), category: .Sport)
+        Room.sampleData.append(room)
+        print(Room.sampleData)
+        
+        self.dismiss(animated: true)
+
+        
     }
 }

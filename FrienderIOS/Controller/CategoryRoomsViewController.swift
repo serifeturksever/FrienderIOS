@@ -9,24 +9,33 @@ import UIKit
 
 class CategoryRoomsViewController: UIViewController {
     
-    var categoryName: String
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    init(categoryName: String){
-        self.categoryName = categoryName
-        super.init(nibName: nil, bundle: nil)
-    }
+    var rooms = Room.sampleData
     
-    required init?(coder: NSCoder) {
-        fatalError("Fatal Error CategoryRoomsViewController")
-    }
+//    var categoryName: String = "Sport"
+//    init(categoryName: String){
+//        self.categoryName = categoryName
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("Fatal Error CategoryRoomsViewController")
+//    }
 
     override func viewDidLoad() {
-        navigationItem.title = self.categoryName
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+//        navigationItem.title = self.categoryName
         
         //add room bar button item
         let addRoomBarButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addRoomPage))
         
+        let editRoomBarButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(addRoomPage))
+        
         navigationItem.rightBarButtonItem = addRoomBarButton
+        navigationItem.leftBarButtonItem = editRoomBarButton
         super.viewDidLoad()
         self.setupUI()
     }
@@ -34,16 +43,6 @@ class CategoryRoomsViewController: UIViewController {
     func setupUI() {
         view.backgroundColor = .systemBackground
         
-        let label = UILabel()
-        label.text = self.categoryName
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label)
-        
-        NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
     }
     
     @objc func addRoomPage() {
@@ -58,4 +57,34 @@ class CategoryRoomsViewController: UIViewController {
         dismiss(animated: true)
     }
     
+}
+
+extension CategoryRoomsViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.rooms.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RoomCollectionViewCell", for: indexPath) as! RoomCollectionViewCell
+        cell.setup(with: self.rooms[indexPath.row])
+        return cell
+    }
+    
+}
+
+extension CategoryRoomsViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.size.width, height: 100)
+    }
+    edi
+}
+
+extension CategoryRoomsViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(self.rooms[indexPath.row].name)
+    }
+
 }
