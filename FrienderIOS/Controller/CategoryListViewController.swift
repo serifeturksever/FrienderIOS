@@ -49,9 +49,17 @@ class CategoryListViewController: UIViewController {
     }
     
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCategoryRooms" {
+            let categoryRoomsVC = segue.destination as! CategoryRoomsViewController
+            let object = sender as! [String:String?]
+            categoryRoomsVC.categoryName = object["categoryName"] as! String
+        }
+            
+    }
     private func showCategoryRooms(categoryName: String){
-        let viewController = CategoryRoomsViewController() //categoryName:categoryName
-        navigationController?.pushViewController(viewController, animated: true)
+        let sender: [String: String?] = ["categoryName": categoryName]
+        self.performSegue(withIdentifier: "showCategoryRooms", sender: sender)
     }
 
 }

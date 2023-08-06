@@ -13,7 +13,7 @@ class CategoryRoomsViewController: UIViewController {
     
     var rooms = Room.sampleData
     
-//    var categoryName: String = "Sport"
+    var categoryName: String?
 //    init(categoryName: String){
 //        self.categoryName = categoryName
 //        super.init(nibName: nil, bundle: nil)
@@ -27,15 +27,18 @@ class CategoryRoomsViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-//        navigationItem.title = self.categoryName
+        navigationItem.title = self.categoryName ?? ""
         
+        rooms = rooms.filter({
+            $0.category.rawValue == self.categoryName ?? ""
+        })
         //add room bar button item
         let addRoomBarButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addRoomPage))
         
-        let editRoomBarButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(addRoomPage))
+//        let editRoomBarButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(addRoomPage))
         
         navigationItem.rightBarButtonItem = addRoomBarButton
-        navigationItem.leftBarButtonItem = editRoomBarButton
+//        navigationItem.leftBarButtonItem = editRoomBarButton
         super.viewDidLoad()
         self.setupUI()
     }
