@@ -15,6 +15,7 @@ class CustomTextField: UITextField {
         case email
         case password
         case repassword
+        case roomName
     }
     
     private let authFieldType: CustomTextFieldType
@@ -51,6 +52,8 @@ class CustomTextField: UITextField {
             self.placeholder = "Repassword"
             self.textContentType = .oneTimeCode
             self.isSecureTextEntry = true
+        case .roomName:
+            self.placeholder = "Room Name"
         }
     }
     required init?(coder: NSCoder) {

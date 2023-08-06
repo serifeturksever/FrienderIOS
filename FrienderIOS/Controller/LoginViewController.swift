@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     var text: UILabel!
+    
     
     private let email = CustomTextField(fieldType: .email)
     private let password = CustomTextField(fieldType: .password)
@@ -24,9 +26,31 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-        
+
+        loginBtn.addTarget(self, action: #selector(openHomePage), for: .touchUpInside)
         registerBtn.addTarget(self, action: #selector(openRegisterPage), for: .touchUpInside)
         forgotPasswordBtn.addTarget(self, action: #selector(openForgotPasswordPage), for: .touchUpInside)
+        
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        handle = Auth.auth().addStateDidChangeListener { auth, user in
+//          // ...
+//        }
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        Auth.auth().removeStateDidChangeListener(handle!)
+//    }
+    
+    @objc private func openHomePage(){
+        Auth.auth().signIn(withEmail: "serifeturksever@gmail.com", password: "123456") { [weak self] authResult, error in
+            guard let strongSelf = self else { return }
+//            print("******", authResult?.user.uid, "*****")
+//            print("login")
+        }
     }
     
     @objc private func openRegisterPage(){
