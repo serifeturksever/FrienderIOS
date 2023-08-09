@@ -14,6 +14,9 @@ class CategoryRoomsViewController: UIViewController {
     var rooms = Room.sampleData
     
     var categoryName: String?
+    
+    let listStyleSegmentedControl = UISegmentedControl(items: ["all","my rooms"])
+
 //    init(categoryName: String){
 //        self.categoryName = categoryName
 //        super.init(nibName: nil, bundle: nil)
@@ -34,13 +37,17 @@ class CategoryRoomsViewController: UIViewController {
         })
         //add room bar button item
         let addRoomBarButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addRoomPage))
-        
-//        let editRoomBarButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(addRoomPage))
-        
         navigationItem.rightBarButtonItem = addRoomBarButton
-//        navigationItem.leftBarButtonItem = editRoomBarButton
+    
+        self.listStyleSegmentedControl.isEnabled = true
+        listStyleSegmentedControl.addTarget(
+           self, action: #selector(didChangeListStyle(_:)), for: .valueChanged)
+        navigationItem.titleView = listStyleSegmentedControl
+
         super.viewDidLoad()
         self.setupUI()
+        
+        
     }
     
     func setupUI() {
@@ -60,7 +67,13 @@ class CategoryRoomsViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    @objc func didChangeListStyle(_ sender: UISegmentedControl ) {
+        print("MY ROOms")
+    }
+    
+    
 }
+
 
 extension CategoryRoomsViewController: UICollectionViewDataSource {
     
@@ -73,7 +86,17 @@ extension CategoryRoomsViewController: UICollectionViewDataSource {
         cell.setup(with: self.rooms[indexPath.row])
         return cell
     }
+    func collectionView(
+        _ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath
+    ) -> Bool {
+        pushDetailViewForRoom(withId: self.rooms[indexPath.item])
+        return false
+    }
     
+    func pushDetailViewForRoom(withId room:Room){
+        let viewController = RoomDetailViewController(room: room)
+        navigationController?.pushViewController(viewController, animated: true)
+     }
 }
 
 extension CategoryRoomsViewController: UICollectionViewDelegateFlowLayout {

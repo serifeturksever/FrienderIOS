@@ -11,6 +11,7 @@
 		E90D6F752A7FF74100AAB9E8 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90D6F742A7FF74100AAB9E8 /* Room.swift */; };
 		E9225C872A7A9EA800BCCDA5 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9225C852A7A9EA800BCCDA5 /* ItemCell.swift */; };
 		E9225C882A7A9EA800BCCDA5 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9225C862A7A9EA800BCCDA5 /* ItemCell.xib */; };
+		E93AFF552A81552100B68D02 /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AFF542A81552100B68D02 /* RoomDetailViewController.swift */; };
 		E98725972A7D7C0D00801C66 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98725962A7D7C0D00801C66 /* CustomDatePicker.swift */; };
 		E987259B2A7D806900801C66 /* Todo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E987259A2A7D806900801C66 /* Todo.rtf */; };
 		E987259D2A7D808600801C66 /* ImportantNotes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E987259C2A7D808600801C66 /* ImportantNotes.rtf */; };
@@ -87,6 +88,7 @@
 		E90D6F742A7FF74100AAB9E8 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		E9225C852A7A9EA800BCCDA5 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		E9225C862A7A9EA800BCCDA5 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		E93AFF542A81552100B68D02 /* RoomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
 		E98725962A7D7C0D00801C66 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		E987259A2A7D806900801C66 /* Todo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Todo.rtf; sourceTree = "<group>"; };
 		E987259C2A7D808600801C66 /* ImportantNotes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ImportantNotes.rtf; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				E9F7E2FE2A72A50C004AE7EB /* ForgotPasswordViewController.swift */,
 				E9C800BF2A7AE92C004E89FC /* CategoryRoomsViewController.swift */,
 				E9C800C12A7AF126004E89FC /* AddRoomPageViewController.swift */,
+				E93AFF542A81552100B68D02 /* RoomDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				E90D6F752A7FF74100AAB9E8 /* Room.swift in Sources */,
 				E9F7E2FF2A72A50C004AE7EB /* ForgotPasswordViewController.swift in Sources */,
 				E9F7E2F12A72A1E2004AE7EB /* WebViewerController.swift in Sources */,
+				E93AFF552A81552100B68D02 /* RoomDetailViewController.swift in Sources */,
 				E98725972A7D7C0D00801C66 /* CustomDatePicker.swift in Sources */,
 				E9F7E2F92A72A454004AE7EB /* ProgressActivityIndicator.swift in Sources */,
 				E9F7E2C12A729D8F004AE7EB /* CategoryListViewController.swift in Sources */,

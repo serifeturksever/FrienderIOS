@@ -10,6 +10,8 @@ import UIKit
 class AddRoomPageViewController: UIViewController {
     
     var roomNameTxtField = CustomTextField(fieldType: .roomName)
+    var roomDescTxtField = CustomTextField(fieldType: .roomDesc)
+
     var createBtn = CustomButton(title: "Create", fontSize: .med)
 
     let titleTxtLabel = UILabel()
@@ -48,6 +50,7 @@ class AddRoomPageViewController: UIViewController {
         
         self.titleTxtLabel.translatesAutoresizingMaskIntoConstraints = false
         self.roomNameTxtField.translatesAutoresizingMaskIntoConstraints = false
+        self.roomDescTxtField.translatesAutoresizingMaskIntoConstraints = false
         self.roomCapacityStepper.translatesAutoresizingMaskIntoConstraints = false
         self.capacityTxtLabel.translatesAutoresizingMaskIntoConstraints = false
         self.activityDatePicker.translatesAutoresizingMaskIntoConstraints = false
@@ -55,6 +58,7 @@ class AddRoomPageViewController: UIViewController {
         
         view.addSubview(self.titleTxtLabel)
         view.addSubview(self.roomNameTxtField)
+        view.addSubview(self.roomDescTxtField)
         view.addSubview(self.roomCapacityStepper)
         view.addSubview(self.capacityTxtLabel)
         view.addSubview(self.activityDatePicker)
@@ -70,6 +74,11 @@ class AddRoomPageViewController: UIViewController {
         self.roomNameTxtField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         self.roomNameTxtField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75),
         self.roomNameTxtField.heightAnchor.constraint(equalToConstant: 55),
+        
+        self.roomDescTxtField.topAnchor.constraint(equalTo: self.roomNameTxtField.bottomAnchor, constant: 40),
+        self.roomDescTxtField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        self.roomDescTxtField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75),
+        self.roomDescTxtField.heightAnchor.constraint(equalToConstant: 55),
 
         self.roomCapacityStepper.topAnchor.constraint(equalTo: self.roomNameTxtField.bottomAnchor, constant: 40),
         self.roomCapacityStepper.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
@@ -97,7 +106,7 @@ class AddRoomPageViewController: UIViewController {
     }
     
     @objc func createRoom(_ sender: UIButton) {
-        let room = Room(name: self.roomNameTxtField.text ?? "", date: self.strDate  , capacity: Int(self.roomCapacityStepper.value), category: .Sport)
+        let room = Room(name: self.roomNameTxtField.text ?? "",desc: self.roomDescTxtField.text ?? "", date: self.strDate  , capacity: Int(self.roomCapacityStepper.value), category: .Sport)
         Room.sampleData.append(room)
         print(Room.sampleData)
         
