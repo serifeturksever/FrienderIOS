@@ -15,19 +15,20 @@ class AddRoomPageViewController: UIViewController {
     var createBtn = CustomButton(title: "Create", fontSize: .med)
 
     let titleTxtLabel = UILabel()
-    let roomCapacityStepper = UIStepper()
-    let capacityTxtLabel = UILabel()
+//    let roomCapacityStepper = UIStepper()
+//    let capacityTxtLabel = UILabel()
     let activityDatePicker = CustomDatePicker()
     var strDate: String = ""
     let dateFormatter = DateFormatter()
 
+    let customStepperView = CustomStepperView()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         self.createBtn.addTarget(self, action: #selector(createRoom), for: .touchUpInside)
         self.activityDatePicker.addTarget(self, action: #selector(activityDateChanged), for: .valueChanged)
-        self.roomCapacityStepper.addTarget(self, action: #selector(roomCapacityChanged), for: .valueChanged)
+        
         self.setupUI()
     }
     
@@ -43,24 +44,22 @@ class AddRoomPageViewController: UIViewController {
         self.titleTxtLabel.sizeToFit()
         self.titleTxtLabel.textAlignment = .center
         
-        self.roomCapacityStepper.minimumValue = 2
-        self.capacityTxtLabel.text = "\(Int(self.roomCapacityStepper.value)) kişi"
-//        self.roomCapacityStepper.center = view.center
+        
         self.activityDatePicker.center = view.center
         
         self.titleTxtLabel.translatesAutoresizingMaskIntoConstraints = false
         self.roomNameTxtField.translatesAutoresizingMaskIntoConstraints = false
         self.roomDescTxtField.translatesAutoresizingMaskIntoConstraints = false
-        self.roomCapacityStepper.translatesAutoresizingMaskIntoConstraints = false
-        self.capacityTxtLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.customStepperView.translatesAutoresizingMaskIntoConstraints = false
+//        self.capacityTxtLabel.translatesAutoresizingMaskIntoConstraints = false
         self.activityDatePicker.translatesAutoresizingMaskIntoConstraints = false
         self.createBtn.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(self.titleTxtLabel)
         view.addSubview(self.roomNameTxtField)
         view.addSubview(self.roomDescTxtField)
-        view.addSubview(self.roomCapacityStepper)
-        view.addSubview(self.capacityTxtLabel)
+        view.addSubview(self.customStepperView)
+//        view.addSubview(self.capacityTxtLabel)
         view.addSubview(self.activityDatePicker)
         view.addSubview(self.createBtn)
         
@@ -80,13 +79,13 @@ class AddRoomPageViewController: UIViewController {
         self.roomDescTxtField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75),
         self.roomDescTxtField.heightAnchor.constraint(equalToConstant: 55),
 
-        self.roomCapacityStepper.topAnchor.constraint(equalTo: self.roomNameTxtField.bottomAnchor, constant: 40),
-        self.roomCapacityStepper.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-        
-        self.capacityTxtLabel.topAnchor.constraint(equalTo: self.roomNameTxtField.bottomAnchor, constant: 40),
-        self.capacityTxtLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-        
-        self.activityDatePicker.topAnchor.constraint(equalTo: self.roomCapacityStepper.bottomAnchor, constant: 40),
+        self.customStepperView.topAnchor.constraint(equalTo: self.roomDescTxtField.bottomAnchor, constant: 40),
+        self.customStepperView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        self.customStepperView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.70),
+//        self.customStepperView.heightAnchor.constraint(equalToConstant: 55),
+
+
+        self.activityDatePicker.topAnchor.constraint(equalTo: self.customStepperView.bottomAnchor, constant: 40),
         self.activityDatePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         
         self.createBtn.topAnchor.constraint(equalTo: self.activityDatePicker.bottomAnchor, constant: 20),
@@ -96,9 +95,6 @@ class AddRoomPageViewController: UIViewController {
         
     }
     
-    @objc func roomCapacityChanged(_ sender: UIStepper) {
-        self.capacityTxtLabel.text = "\(Int(sender.value)) kişi"
-    }
     
     @objc func activityDateChanged(_ sender: UIDatePicker) {
         
@@ -106,7 +102,8 @@ class AddRoomPageViewController: UIViewController {
     }
     
     @objc func createRoom(_ sender: UIButton) {
-        let room = Room(name: self.roomNameTxtField.text ?? "",desc: self.roomDescTxtField.text ?? "", date: self.strDate  , capacity: Int(self.roomCapacityStepper.value), category: .Sport)
+        let getStepperValue = self.customStepperView.getStepperValue()
+        let room = Room(name: self.roomNameTxtField.text ?? "",desc: self.roomDescTxtField.text ?? "", date: self.strDate  , capacity: getStepperValue, category: .Sport)
         Room.sampleData.append(room)
         print(Room.sampleData)
         

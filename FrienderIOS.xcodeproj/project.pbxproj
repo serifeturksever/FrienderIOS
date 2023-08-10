@@ -15,6 +15,7 @@
 		E98725972A7D7C0D00801C66 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98725962A7D7C0D00801C66 /* CustomDatePicker.swift */; };
 		E987259B2A7D806900801C66 /* Todo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E987259A2A7D806900801C66 /* Todo.rtf */; };
 		E987259D2A7D808600801C66 /* ImportantNotes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E987259C2A7D808600801C66 /* ImportantNotes.rtf */; };
+		E990E3602A84E6E100F573FE /* CustomStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990E35F2A84E6E100F573FE /* CustomStepperView.swift */; };
 		E9C800C02A7AE92C004E89FC /* CategoryRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C800BF2A7AE92C004E89FC /* CategoryRoomsViewController.swift */; };
 		E9C800C22A7AF126004E89FC /* AddRoomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C800C12A7AF126004E89FC /* AddRoomPageViewController.swift */; };
 		E9F7E2BD2A729D8F004AE7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2BC2A729D8F004AE7EB /* AppDelegate.swift */; };
@@ -92,6 +93,7 @@
 		E98725962A7D7C0D00801C66 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		E987259A2A7D806900801C66 /* Todo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Todo.rtf; sourceTree = "<group>"; };
 		E987259C2A7D808600801C66 /* ImportantNotes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ImportantNotes.rtf; sourceTree = "<group>"; };
+		E990E35F2A84E6E100F573FE /* CustomStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepperView.swift; sourceTree = "<group>"; };
 		E9C800BF2A7AE92C004E89FC /* CategoryRoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRoomsViewController.swift; sourceTree = "<group>"; };
 		E9C800C12A7AF126004E89FC /* AddRoomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomPageViewController.swift; sourceTree = "<group>"; };
 		E9F7E2B92A729D8F004AE7EB /* FrienderIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrienderIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 				E9F7E2F82A72A454004AE7EB /* ProgressActivityIndicator.swift */,
 				E98725962A7D7C0D00801C66 /* CustomDatePicker.swift */,
 				E90D6F722A7FF68300AAB9E8 /* RoomCollectionViewCell.swift */,
+				E990E35F2A84E6E100F573FE /* CustomStepperView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				E9F7E2FF2A72A50C004AE7EB /* ForgotPasswordViewController.swift in Sources */,
 				E9F7E2F12A72A1E2004AE7EB /* WebViewerController.swift in Sources */,
 				E93AFF552A81552100B68D02 /* RoomDetailViewController.swift in Sources */,
+				E990E3602A84E6E100F573FE /* CustomStepperView.swift in Sources */,
 				E98725972A7D7C0D00801C66 /* CustomDatePicker.swift in Sources */,
 				E9F7E2F92A72A454004AE7EB /* ProgressActivityIndicator.swift in Sources */,
 				E9F7E2C12A729D8F004AE7EB /* CategoryListViewController.swift in Sources */,
