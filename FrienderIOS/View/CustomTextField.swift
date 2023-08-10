@@ -17,6 +17,7 @@ class CustomTextField: UITextField {
         case repassword
         case roomName
         case roomDesc
+        case entries
 
     }
     
@@ -58,6 +59,8 @@ class CustomTextField: UITextField {
             self.placeholder = "Room Name"
         case .roomDesc:
             self.placeholder = "Room Description"
+        case .entries:
+            self.placeholder = "Entry Type"
         }
     }
     required init?(coder: NSCoder) {

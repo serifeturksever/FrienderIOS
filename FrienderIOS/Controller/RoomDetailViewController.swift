@@ -18,6 +18,7 @@ class RoomDetailViewController: UIViewController {
     let roomDescription = UILabel()
     let joinBtn = CustomButton(title: "Join", fontSize: .med)
     
+    
     var room: Room
     init(room: Room) {
         self.room = room
@@ -35,6 +36,7 @@ class RoomDetailViewController: UIViewController {
     }
     
     func setupUI() {
+        navigationItem.title = "Room Info"
         self.view.backgroundColor = .systemBackground
         
         self.view.addSubview(self.scrollView)
@@ -49,7 +51,7 @@ class RoomDetailViewController: UIViewController {
         
         self.stackView.axis = .vertical
         self.stackView.alignment = .center
-        self.stackView.spacing = 100
+        self.stackView.spacing = 60
                     
 //        self.stackView.isUserInteractionEnabled = true
         self.stackView.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor).isActive = true
@@ -60,7 +62,7 @@ class RoomDetailViewController: UIViewController {
         self.stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         
         self.roomName.text = room.name
-        self.roomCapacity.text = "3/\(String(room.capacity))" // 3 dinamik gelecek!
+        self.roomCapacity.text = "3/\(String(room.capacity)) katılımcı" // 3 dinamik gelecek!
         self.activityDate.text = room.date
         self.roomDescription.text = room.desc
         //activity date
@@ -86,8 +88,16 @@ class RoomDetailViewController: UIViewController {
     }
     
     @objc func sentRequestBtn() {
-        self.joinBtn.setTitle("Request Sent", for: .normal)
-        self.joinBtn.setTitleColor(.systemGreen, for: .normal)
+        if(room.entryType.rawValue == "Request") {
+            self.joinBtn.setTitle("Request Sent", for: .normal)
+            self.joinBtn.setTitleColor(.systemGreen, for: .normal)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+            vc.room = room
+            navigationController?.pushViewController(vc, animated: true)
+        }
+       
     }
     
 }

@@ -15,6 +15,7 @@ struct Room: Identifiable, Codable {
     var date: String
     var capacity: Int
     var category: Categories
+    var entryType: Entries
     
 }
 
@@ -27,12 +28,17 @@ enum Categories: String, Codable {
     case Study
 }
 
+enum Entries: String, Codable {
+    case Direct
+    case Request
+}
+
 #if DEBUG
 extension Room {
     static var sampleData: [Room] = [
-        Room(name: "Voleybol",desc:"Voleybol desc", date: "12 Agu 2023", capacity: 12, category: .Sport),
-        Room(name: "Yüzme",desc:"Yüzme desc", date: "13 Agu 2023", capacity: 2, category: .Sport),
-        Room(name: "Fitness",desc:"Fitness desc", date: "14 Agu 2023", capacity: 4, category: .Sport)
+        Room(name: "Voleybol",desc:"Voleybol desc", date: "12 Agu 2023", capacity: 12, category: .Sport, entryType: .Direct),
+        Room(name: "Yüzme",desc:"Yüzme desc", date: "13 Agu 2023", capacity: 2, category: .Sport, entryType: .Request),
+        Room(name: "Fitness",desc:"Fitness desc", date: "14 Agu 2023", capacity: 4, category: .Sport, entryType: .Direct)
     ]
 }
 #endif

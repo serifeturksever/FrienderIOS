@@ -16,6 +16,8 @@
 		E987259B2A7D806900801C66 /* Todo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E987259A2A7D806900801C66 /* Todo.rtf */; };
 		E987259D2A7D808600801C66 /* ImportantNotes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E987259C2A7D808600801C66 /* ImportantNotes.rtf */; };
 		E990E3602A84E6E100F573FE /* CustomStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990E35F2A84E6E100F573FE /* CustomStepperView.swift */; };
+		E990E3622A84FE6900F573FE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990E3612A84FE6900F573FE /* ChatViewController.swift */; };
+		E990E3642A850E3100F573FE /* CustomUIPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990E3632A850E3100F573FE /* CustomUIPicker.swift */; };
 		E9C800C02A7AE92C004E89FC /* CategoryRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C800BF2A7AE92C004E89FC /* CategoryRoomsViewController.swift */; };
 		E9C800C22A7AF126004E89FC /* AddRoomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C800C12A7AF126004E89FC /* AddRoomPageViewController.swift */; };
 		E9F7E2BD2A729D8F004AE7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F7E2BC2A729D8F004AE7EB /* AppDelegate.swift */; };
@@ -94,6 +96,8 @@
 		E987259A2A7D806900801C66 /* Todo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Todo.rtf; sourceTree = "<group>"; };
 		E987259C2A7D808600801C66 /* ImportantNotes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ImportantNotes.rtf; sourceTree = "<group>"; };
 		E990E35F2A84E6E100F573FE /* CustomStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepperView.swift; sourceTree = "<group>"; };
+		E990E3612A84FE6900F573FE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		E990E3632A850E3100F573FE /* CustomUIPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIPicker.swift; sourceTree = "<group>"; };
 		E9C800BF2A7AE92C004E89FC /* CategoryRoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRoomsViewController.swift; sourceTree = "<group>"; };
 		E9C800C12A7AF126004E89FC /* AddRoomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomPageViewController.swift; sourceTree = "<group>"; };
 		E9F7E2B92A729D8F004AE7EB /* FrienderIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrienderIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +269,7 @@
 				E98725962A7D7C0D00801C66 /* CustomDatePicker.swift */,
 				E90D6F722A7FF68300AAB9E8 /* RoomCollectionViewCell.swift */,
 				E990E35F2A84E6E100F573FE /* CustomStepperView.swift */,
+				E990E3632A850E3100F573FE /* CustomUIPicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				E9C800BF2A7AE92C004E89FC /* CategoryRoomsViewController.swift */,
 				E9C800C12A7AF126004E89FC /* AddRoomPageViewController.swift */,
 				E93AFF542A81552100B68D02 /* RoomDetailViewController.swift */,
+				E990E3612A84FE6900F573FE /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -476,8 +482,10 @@
 				E9F7E2BD2A729D8F004AE7EB /* AppDelegate.swift in Sources */,
 				E90D6F732A7FF68300AAB9E8 /* RoomCollectionViewCell.swift in Sources */,
 				E9225C872A7A9EA800BCCDA5 /* ItemCell.swift in Sources */,
+				E990E3642A850E3100F573FE /* CustomUIPicker.swift in Sources */,
 				E9F7E2BF2A729D8F004AE7EB /* SceneDelegate.swift in Sources */,
 				E9F7E2F32A72A293004AE7EB /* CustomButton.swift in Sources */,
+				E990E3622A84FE6900F573FE /* ChatViewController.swift in Sources */,
 				E9F7E2F72A72A392004AE7EB /* AuthHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

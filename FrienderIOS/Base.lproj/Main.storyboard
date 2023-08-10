@@ -257,17 +257,17 @@
             </objects>
             <point key="canvasLocation" x="-853" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="n9y-Eh-gaG">
             <objects>
-                <viewController id="CIV-fx-q2u" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CIV-fx-q2u" customClass="ChatViewController" customModule="FrienderIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6yb-v6-xm4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fH-eZ-JD4">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fH-eZ-JD4">
                                 <rect key="frame" x="20" y="768" width="273" height="50"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="9Km-Nl-Usq"/>
                                     <constraint firstAttribute="height" constant="50" id="gML-rr-cG2"/>
@@ -296,6 +296,10 @@
                             <constraint firstItem="Zcn-1z-bH0" firstAttribute="bottom" secondItem="9fH-eZ-JD4" secondAttribute="bottom" id="x0Z-yr-Fvq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageSendBtn" destination="es3-IM-Z84" id="1Li-I4-OSP"/>
+                        <outlet property="messageTxtField" destination="9fH-eZ-JD4" id="N43-0a-dpE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9z-GV-icQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,9 +330,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
